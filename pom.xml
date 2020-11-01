@@ -20,20 +20,26 @@
     </properties>
 
     <dependencies>
-<!--        第一个是使用jpa的start 其中封装了hibernate-->
+        <!--        第一个是使用jpa的start 其中封装了hibernate-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-<!--        是mysql的驱动插件 对应配置中spring.datasource.driver-class-name=com.mysql.jdbc.Driver-->
+        <!--是mysql的驱动插件 对应配置中spring.datasource.driver-class-name=com.mysql.jdbc.Driver-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
 
-<!--        这两是利用web验证时刻所访问的内容-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+
+        <!--        这两是利用web验证时刻所访问的内容-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
