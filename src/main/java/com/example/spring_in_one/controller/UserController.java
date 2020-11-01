@@ -31,7 +31,7 @@ public class UserController extends BaseController {
                 user.setUpdateDate(new Date());
             }
             userService.save(user);
-            logger.info("保存成功");
+            logger.info("保存成功啊!");
             return getModelMap(StateParameter.SUCCESS, user, "保存成功");
         } catch (Exception e) {
             e.printStackTrace();
