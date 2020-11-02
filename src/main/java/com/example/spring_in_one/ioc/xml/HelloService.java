@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloService {
     private Student student;
+    @Autowired
     private Animal animal;
 
     public Animal getAnimal() {
@@ -28,7 +29,6 @@ public class HelloService {
     }
 
     public String hello() {
-        //return animal.getName();
-        return "hello";
+        return animal.getName();
     }
 }
