@@ -5,8 +5,9 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="student" class="com.example.spring_in_one.ioc.xml.Student">
-        <property name="name" value="zhangsan"/>
-        <property name="age" value="18"/>
+        <constructor-arg index="0" value="zhangsan"/>
+        <constructor-arg index="1" value="13"/>
+
         <property name="classList">
             <list>
                 <value>math</value>
