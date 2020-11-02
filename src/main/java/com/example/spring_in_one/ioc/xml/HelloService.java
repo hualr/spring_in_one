@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class HelloService {
     private Student student;
     @Autowired
-    @Qualifier("myCat")
+    @Qualifier("monkey")
     private Animal animal;
 
     public Animal getAnimal() {
