@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 @SpringBootTest
-@ContextConfiguration(locations = "classpath:ioc/demo.xml")
+//@ContextConfiguration(locations = "classpath:ioc/demo.xml")
 class SpringInOneApplicationTests {
 
 

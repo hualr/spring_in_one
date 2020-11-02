@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+//对于xml配置而言,这个注解是不需要存在的.该注解取代了xml
 @Component
 public class HelloService {
     private Student student;
@@ -27,6 +28,7 @@ public class HelloService {
     }
 
     public String hello() {
-        return animal.getName();
+        //return animal.getName();
+        return "hello";
     }
 }
