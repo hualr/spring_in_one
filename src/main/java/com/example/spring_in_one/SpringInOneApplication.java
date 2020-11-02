@@ -1,6 +1,7 @@
 package com.example.spring_in_one;
 
 import com.example.spring_in_one.initializer.SecondInitializer;
+import com.example.spring_in_one.listener.SecondListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,7 +12,7 @@ public class SpringInOneApplication {
 
         //SpringApplication.run(SpringInOneApplication.class, args);
         SpringApplication springApplication = new SpringApplication(SpringInOneApplication.class);
-        springApplication.addInitializers(new SecondInitializer());
+        springApplication.addListeners(new SecondListener());
         springApplication.run(args);
 
     }
