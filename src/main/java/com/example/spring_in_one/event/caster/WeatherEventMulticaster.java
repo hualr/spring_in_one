@@ -1,5 +1,8 @@
 package com.example.spring_in_one.event.caster;
 
+import org.springframework.stereotype.Component;
+//使其可以被自动注入
+@Component
 public class WeatherEventMulticaster extends AbstractEventMulticaster {
 
     @Override

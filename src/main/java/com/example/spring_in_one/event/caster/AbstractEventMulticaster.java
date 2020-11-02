@@ -4,10 +4,14 @@ import com.example.spring_in_one.event.event.WeatherEvent;
 import com.example.spring_in_one.event.listener.WeatherListener;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public abstract class AbstractEventMulticaster implements EventMulticaster {
 
-    private List<WeatherListener> listenerList=new ArrayList<>();
+    @Autowired
+    private List<WeatherListener> listenerList;
 
     @Override
     public void multicastEvent(WeatherEvent event) {
