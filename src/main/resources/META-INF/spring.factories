@@ -1,1 +1,2 @@
-org.springframework.context.ApplicationContextInitializer=com.example.spring_in_one.initializer.FirstInitializer
+#org.springframework.context.ApplicationContextInitializer=com.example.spring_in_one.initializer.FirstInitializer
+org.springframework.context.ApplicationListener=com.example.spring_in_one.listener.FirstListener
