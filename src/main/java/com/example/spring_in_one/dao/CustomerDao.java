@@ -9,7 +9,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CustomerDao extends JpaRepository<Customer, String> {
+public interface CustomerDao extends JpaRepository<Customer, Long> {
+
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query(value = "FROM Customer where  cust_id= :cust_id")
     Customer findByCustomerId(@Param("cust_id") String cust_id);

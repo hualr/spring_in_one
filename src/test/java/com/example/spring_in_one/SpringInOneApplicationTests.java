@@ -25,12 +25,12 @@ class SpringInOneApplicationTests {
 
     @Test
     public void test() {
-        customerService.setCustomerInfo("1","黎明","光明");
+        customerService.setCustomerInfo("1",null,"光明");
     }
 
     @Test
     public void test2() {
-        customerService.setCustomerInfo("1","傍晚","黑暗");
+        customerService.setCustomerInfo("1","傍晚",null);
     }
 
 }
