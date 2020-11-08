@@ -34,9 +34,10 @@ public class CustomerServiceImpl implements CustomerService {
          * 但是之后.此时继续执行这个语句的时候会发现,此时已经有一个排他锁,因此我无法再给数据库进行上锁了
          */
             Customer customer = customerDao.findByCustomerId(uuid);
-            saveInfo(uuid,"13");
+            //saveInfo(uuid,"13");
             //外部调用如果新启线程会被卡死
             //inernalService.saveInfo(uuid,"124");
+           // inernalService.saveInfo(customer,"124");
             //同一个事务可以加两把写锁
             customer = customerDao.findByCustomerId(uuid);
 

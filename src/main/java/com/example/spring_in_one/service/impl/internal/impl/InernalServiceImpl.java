@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  * Version: 1.0.0
  */
 //新事务 排他锁 最终导致出现死锁情况
-@Transactional(Transactional.TxType.REQUIRES_NEW)
+@Transactional()
 @Service
 public class InernalServiceImpl implements InernalService {
     @Autowired
@@ -23,5 +23,13 @@ public class InernalServiceImpl implements InernalService {
     @Override
     public void saveInfo(String uuid, String phone) {
         Customer customerId = customerDao.findByCustomerId(uuid);
+        customerId.setCustPhone(phone);
+        customerDao.save(customerId);
+    }
+
+    @Override
+    public void saveInfo(Customer customer, String phone) {
+        customer.setCustPhone(phone);
+        customerDao.save(customer);
     }
 }

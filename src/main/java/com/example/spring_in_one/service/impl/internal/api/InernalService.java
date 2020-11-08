@@ -14,5 +14,6 @@ import org.springframework.stereotype.Service;
  */
 public interface InernalService {
 
-    public void saveInfo(String uuid, String phone);
+    void saveInfo(String uuid, String phone);
+    void saveInfo(Customer customer, String phone);
 }
