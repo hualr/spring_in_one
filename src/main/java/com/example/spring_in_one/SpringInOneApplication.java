@@ -2,6 +2,7 @@ package com.example.spring_in_one;
 
 import com.example.spring_in_one.initializer.SecondInitializer;
 import com.example.spring_in_one.listener.SecondListener;
+import java.util.Properties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,9 +11,12 @@ public class SpringInOneApplication {
 
     public static void main(String[] args) {
 
-        //SpringApplication.run(SpringInOneApplication.class, args);
         SpringApplication springApplication = new SpringApplication(SpringInOneApplication.class);
-        springApplication.addListeners(new SecondListener());
+        //使用默认属性尝试
+        Properties properties=new Properties();
+        properties.setProperty("a","aa");
+        properties.setProperty("b","bb");
+        springApplication.setDefaultProperties(properties);
         springApplication.run(args);
 
     }
