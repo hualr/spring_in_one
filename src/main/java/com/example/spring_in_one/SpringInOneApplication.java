@@ -5,8 +5,10 @@ import com.example.spring_in_one.listener.SecondListener;
 import java.util.Properties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
+@PropertySource({"demo.properties"})
 public class SpringInOneApplication {
 
     public static void main(String[] args) {
