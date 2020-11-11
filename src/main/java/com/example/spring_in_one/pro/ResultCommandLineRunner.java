@@ -12,6 +12,10 @@ public class ResultCommandLineRunner implements CommandLineRunner, EnvironmentAw
     public void run(String... args) throws Exception {
         System.out.println(env.getProperty("a"));
         System.out.println(env.getProperty("b"));
+        //这个属性是直接从文件中任意生成的
+        System.out.println(env.getProperty("c"));
+        //从默认properties文件中加载
+        System.out.println(env.getProperty("d"));
     }
     @Override
     public void setEnvironment(Environment environment) {
